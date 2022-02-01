@@ -1,0 +1,18 @@
+<ng-container *ngIf="productDetails">
+  <div class="container">
+    <img src="{{productDetails.image}}" class="card-img-top" alt="..." style="height: 150px; width: 200px;">
+    <div class="row">
+      <div style="width: 50rem;">        
+        <div class="card-body">
+          <h5 class="card-title">{{productDetails.title}}</h5>
+          <div><b>Description:</b>: {{productDetails.description}}</div>
+          <div><b>Price:</b> ${{productDetails.price}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="!productDetails">
+  <p>loading...</p>
+</ng-container>
+<button (click)="backClicked()">Go Back</button>
